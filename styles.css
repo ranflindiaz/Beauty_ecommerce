@@ -1,0 +1,220 @@
+:root {
+    --main-color: #BAABDA;
+    --main-color-text: #FFF9F9;
+    
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--main-color-text);
+}
+
+.btn {
+    color: var(--main-color-text);
+    background-color: black;
+    font-size: 1.8rem;
+    transition: background-color 0.2s ease-in;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#header {
+    width: 100%;
+}
+
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    font-size: 1.8rem;
+    background-color: var(--main-color);
+    color: var(--main-color-text);
+    box-shadow: 0rem 0.3rem 0.3rem rgba(186,171,218, .3);
+    position: fixed;
+    top: 0;
+}
+
+.header-wrapper .logo {
+    margin-left: 2rem;
+}
+
+.header-wrapper .nav-list {
+    width: 45rem;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-list .nav-link {
+    text-decoration: none;
+    
+}
+
+.nav-list li {
+    margin-left: 1.5rem;
+}
+
+.nav-list li a {
+    padding: 1rem 0rem 0.3rem 0rem ;
+    color: inherit;
+    position: relative;
+}
+
+.nav-list li a::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    left:0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-color-text);
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom; 
+    -ms-transform-origin: center bottom; 
+    -o-transform-origin: center bottom;
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
+    -webkit-transition: transform 0.3s linear;
+    -moz-transition: transform 0.3s linear;
+    -o-transition: transform 0.3s linear;
+}
+
+.nav-list li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom; 
+    -ms-transform-origin: center bottom; 
+    -o-transform-origin: center bottom;
+    transition: transform 0.3s linear;
+    -webkit-transition: transform 0.3s linear;
+    -moz-transition: transform 0.3s linear;
+    -o-transition: transform 0.3s linear;
+}
+
+.header-wrapper #cart {
+    margin-right: 2rem;
+} 
+
+/*************** Media Query for Navigation on 350px ***************/
+@media only screen and (max-width:21.875rem) {
+    .nav-list {
+        margin-left: 1rem;
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: rgba(181, 143, 193, 0.9);
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2rem;
+        right: 0;
+        color: var(--main-color-text);
+    }
+}
+
+/*************** Main ***************/
+/*************** HERO-SECTION ***************/
+#main {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.hero {
+    background: url('/assets/img/hero-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 6rem);
+    color: var(--main-color-text);
+    font-size: 1.8rem;
+}
+
+/****Sign Up Form****/
+.sing-up {
+    width: 100%;
+    min-width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sing-up .sign-up_title {
+    font-size: 3rem;
+}
+
+.sing-up .sign-up_text {
+    margin-top: 3rem;
+    color: #FFF;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.sing-up .sign-up_form {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sign-up_form #email {
+    width: 50%;
+    padding: 1em;
+    border: rgba(0,0,0,.12);
+    font-size: 1.8rem;
+}
+
+.sign-up_form .sing-up_link {
+    text-align: center;
+    width: 20%;
+    padding: 1rem 0.8rem;
+    text-decoration: none;
+}
+
+.hero .hero-container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero .hero-content, .hero .sing-up {
+    width: 45%;
+    margin: 5rem auto;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-content .hero-content_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.hero-content .hero_btn-shop-now{
+    padding: 1rem 0.8rem;
+    text-decoration: none;
+}
+
