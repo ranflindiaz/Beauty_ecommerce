@@ -66,9 +66,8 @@ body {
     list-style: none;
 }
 
-.nav-list .nav-link {
+.nav-link {
     text-decoration: none;
-    
 }
 
 .nav-list li {
@@ -76,7 +75,7 @@ body {
 }
 
 .nav-list li a {
-    padding: 1rem 0rem 0.3rem 0rem ;
+    padding: 0.5rem;
     color: inherit;
     position: relative;
 }
@@ -233,7 +232,7 @@ body {
     padding: 1rem 0.4rem
 }
 
-/*************** Read ***************/
+/*************** Articles ***************/
 
 .read {
     padding: 4rem 0rem;
@@ -282,13 +281,14 @@ body {
 .card_description {
     width: 100%;
     font-size: 1.5rem;
-    height: 13rem;
+    height: 14rem;
+    min-height: 14rem;
     text-align: justify;
 }
 
 .read-card_bth {
-    margin-top: 2rem;
-   text-align: center;
+    margin-top: 1.5rem;
+    text-align: center;
 }
 /*************** End of Main ***************/
 
@@ -348,9 +348,6 @@ body {
     margin: 0.5rem;
 }
 
-
-
-
 /************************** Media Queries /**************************
  *************** Media Query for Navigation on 350px ***************/
 @media only screen and (max-width:21.875rem) {
@@ -362,14 +359,14 @@ body {
         flex-direction: column;
         padding: min(20vh, 10rem) 2rem;
         right: 0;
-        color: var(--main-color-text);
+        color: #363333;
     }
 }
 
-/*************** TODO: Media Query for ***************/
-/*************** BEST SELLER ***************/
+/*************** TODO: Media Query for ***************
 
-/*1360px width display*/
+ *************** BEST SELLER ***************
+****************1360px width display********/
 @media only screen and (max-width:85rem) {
     
     .best-sellers {
@@ -396,11 +393,15 @@ body {
     }
 }
 
-/*1200px width display*/
+/*1200px max - width display*/
 @media only screen and (max-width:75rem) {
+
+/*************** Nav ***************/
     .header-wrapper .nav-list {
         width: 45rem;
     }
+
+/*************** BEST SELLER ***************/
     .best-sellers_cards {
         width: 80%;
         display: grid;
@@ -419,5 +420,98 @@ body {
     .card img, .card .card_text {
         width: 100%;
     }
+
+    /**************** Articles ****************/
+    .article {
+        width: 80%;
+        height: 55rem;
+    }
+
+    .card_content img{
+        height: 26rem;
+    }
+    
+    .card_content span {
+        padding: 0.5rem
+    }
+    
+    .card_description {
+        height: 14.3rem;
+        overflow-y: hidden;
+    }
+    
+    .read-card_bth {
+        margin-top: 0.5rem;
+    }
+}
+
+/*850px max - width display*/
+@media only screen and (max-width:53.125rem) {
+
+    /*************** Nav HERE ***************/
+
+
+    /*************** Sign up Form ***************/
+    .sing-up .sign-up_text {
+        font-size: 2.5rem;
+    }
+
+    .sign-up_form #email, .sing-up .sing-up_link {
+        font-size: 1.6rem;
+    }
+
+    .sing-up .sing-up_link {
+        width: 16.1rem;
+        padding: 1.385rem;
+    }
+
+    /*************** BEST SELLER ***************/
+    .best-sellers_cards {
+        width: 95%;
+        grid-template-columns: repeat(2, minmax(28.5rem, 1fr));
+    }
+
+    .card {
+        width: 28.5rem;
+        padding: 0 0.84rem;
+        margin-bottom: 0rem;
+    }
+
+    .card img, .card .card_text {
+        width: 100%;
+    }
+}
+
+/*670px max - width display*/
+@media only screen and (max-width:41.875rem) {
+
+
+    /*************** Sign up Form ***************/
+
+    .sing-up .sign-up_text {
+        font-size: 1.6rem;
+    }
+
+    .sign-up_form #email, .sing-up .sing-up_link {
+        width: 30%;
+        font-size: 1.6rem;
+    }
+
+    .sing-up .sing-up_link {
+        width: 16.1rem;
+        padding: 1.385rem;
+    }
+}
+
+/*670px - width display and lowers*/
+@media only screen and (max-width:39.0625rem) {
+
+    .nav-list {
+        display: none !important;
+    }
+
+    .hero {
+    }
+
 }
 
